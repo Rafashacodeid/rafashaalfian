@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/icons/fasicon2.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Python Challenges V1 2025 Winners</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #101214;
+            --secondary-color: #2980b9;
+            --accent-color: #e67e22;
+            --text-color: #4a4a4a;
+            --bg-color: #f8f9fa;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Reset dan base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            flex: 1;
+        }
+
+        /* Header improvements */
+        .header {
+            text-align: center;
+            margin: -2rem -1.5rem 3rem;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, var(--secondary-color), #1a5f8c);
+            color: white;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .header p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid improvements */
+        .winners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+
+        /* Card enhancements */
+        .winner-card {
+            background: white;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .winner-image {
+            width: clamp(120px, 20vw, 160px);
+            height: clamp(120px, 20vw, 160px);
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 4px solid var(--secondary-color);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Typography improvements */
+        .winner-position {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            padding: 0.5rem 1.25rem;
+            border-radius: 2rem;
+            background: rgba(230, 126, 34, 0.1);
+            backdrop-filter: blur(4px);
+        }
+
+        .winner-name {
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .winner-details p {
+            margin-bottom: 0.75rem;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+            color: #666;
+            text-align: center;
+        }
+
+        /* Button enhancements */
+        .download-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 2rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            width: fit-content;
+            text-decoration: none;
+            border: 2px solid transparent;
+        }
+
+        .download-btn:hover {
+            background-color: #236fa3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+        }
+
+        /* Footer improvements */
+        #footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            margin-top: auto;
+        }
+
+        .footer-info {
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            .header {
+                margin: -1.5rem -1rem 2rem;
+                padding: 3rem 1rem;
+            }
+
+            .winners-grid {
+                gap: 1.5rem;
+            }
+
+            .winner-card {
+                padding: 1.5rem;
+            }
+
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                border-radius: 0;
+            }
+
+            .winner-image {
+                width: 140px;
+                height: 140px;
+            }
+
+            .winner-position {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Python Challenges V1 2025 Winners</h1>
+            <p>Celebrating Excellence in Python Programming Innovation</p>
+        </header>
+
+        <div class="winners-grid">
+            <!-- Champion Card -->
+            <article class="winner-card">
+                <img src="/assets/images/unnamed1.webp" alt="Sarah Johnson - 2025 Python Champion" class="winner-image">
+                <div class="winner-details">
+                    <div class="winner-position">🏆 Grand Champion</div>
+                    <h2 class="winner-name">Topa Amadeus Stephanus Situmorang</h2>
+                    <p>Score: 98.5/100</p>
+                    <p>Category: Easy - sum_even_numbers</p>
+                    <button class="download-btn" id="download1">
+                        📄 Download Certificate
+                    </button>
+                </div>
+            </article>
+
+            <!-- Runner-up Card -->
+            <article class="winner-card">
+                <img src="/assets/images/unnamed.webp" alt="Michael Chen - 2025 Python Runner-up" class="winner-image">
+                <div class="winner-details">
+                    <div class="winner-position">🥈 Runner-up</div>
+                    <h2 class="winner-name">Arcel Magabe Nainggolan</h2>
+                    <p>Score: 96/100</p>
+                    <p>Category: Easy - sum_even_numbers</p>
+                    <button class="download-btn" id="download2">
+                        📄 Download Certificate
+                    </button>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="mt-12 mb-16 md:mb-24 flex justify-center"> 
+        <a href="/index.html" 
+           class="inline-flex items-center bg-teal-600 hover:bg-teal-700 px-8 py-3 rounded-lg shadow-lg transition-all 
+                  text-sm md:text-base group">
+            <i class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i> 
+            Kembali ke Halaman Utama
+        </a> 
+    </div>
+    <!-----------------Footer--------------->
+    <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <div class="footer-info">
+                  <h3>
+                      Rafasha alfiandi
+                  </h3>
+                  <p class="pb-3"><em></em></p>
+                  <p>JawaBarat,<br>Indonesian<br><br><strong>Phone:</strong> +6287734034677<br><strong>Email:</strong>
+                      rfshacoderid@gmail.com<br></p>
+                  <div class="social-links mt-3">
+                    <a href="https://www.youtube.com/@Rafashaalfiandi" class="twitter"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://T.me/Rafashaalfian" class="facebook"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.instagram.com/rfashacode.id" class="instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Rfshacodeid" class="google-plus"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="linkedin"><i class="fa-solid fa-link"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="fa-solid fa-chevron-right"></i> <a href="#">Home</a></li>
+                  <li>
+                  <li><i class="fa-solid fa-chevron-right"></i> <a href="https://rafashaalfian.my.id">Pricing</a></li>
+                  <li>
+                  <li><i class="fa-solid fa-chevron-right"></i> <a href="https://t.me/Rafashaalfian">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-6 footer-newsletter">
+                <h4>SUPPORT TERUS Rafashaalfian</h4>
+                <p>Bantu Support Terus Guys, Jika kalian butuh bantuan Conctact Owner Di Samping Kiri</p>
+                <form action="https://www.youtube.com/@Rafashaalfiandi" method="post"><input type="email" name="email"><input type="submit" value="Subscribe">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">&copy; Copyright <strong><span>Rafashadev</span></strong>. All Rights Reserved</div>
+          <div class="credits">Designed by <a href="https://www.youtube.com/@Rafashaalfiandi">RfashacoderID</a></div>
+        </div>
+      </footer>
+
+</body>
+</html>
+
+    <script>
+        // Enhanced download function with user feedback
+        function downloadCertificate(path, fileName) {
+            const link = document.createElement('a');
+            link.href = path;
+            link.download = fileName || 'certificate.pdf';
+            link.target = '_blank';
+            
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Optional: Add toast notification here
+        }
+
+        // Event listeners with proper error handling
+        document.getElementById('download1').addEventListener('click', () => {
+            downloadCertificate('/Database/sertifikat_010000_ TopaAmadeusStephanusSitumorang.pdf', 'Topa Amadeus Stephanus Situmorang_Certificate.pdf');
+        });
+
+        document.getElementById('download2').addEventListener('click', () => {
+            downloadCertificate('/Database/sertifikat_020000_Arcel Magabe Nainggolan.pdf', 'Arcel Magabe Nainggolan_Certificate.pdf');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/icons/fasicon1.png" type="image/x-icon"/>
+    <title>Rafasha-Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .whatsapp-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3);
+        }
+        .price-text {
+            text-wrap: balance;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-12">
+        <div class="max-w-4xl w-full space-y-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-teal-400 mb-4">Paket Web Request</h1>
+                <p class="text-lg md:text-xl text-gray-300">Website sesuai keinginanmu</p>
+            </div>
+
+            <!-- Paket Card Container -->
+            <div class="flex justify-center">
+                <!-- Paket Basic -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-teal-400/20 transition-all transform hover:scale-[1.02] w-full max-w-2xl">
+                    <div class="flex flex-col h-full text-left space-y-6">
+                        <h3 class="text-2xl md:text-3xl font-semibold text-teal-400">Website Custom</h3>
+                        <ul class="space-y-3 md:space-y-4 mb-6 list-disc pl-6 text-gray-300 text-sm md:text-base">
+                            <li class="leading-relaxed">Desain & fitur sesuai permintaan</li>
+                            <li class="leading-relaxed">Halaman unlimited (sesuai kebutuhan)</li>
+                            <li class="leading-relaxed">UI/UX profesional & interaktif</li>
+                            <li class="leading-relaxed">Animasi & efek sesuai konsep</li>
+                            <li class="leading-relaxed">Optimasi kecepatan & SEO dasar</li>
+                            <li class="leading-relaxed">Revisi fleksibel</li>
+                            <li class="leading-relaxed">Waktu pengerjaan menyesuaikan kompleksitas</li>
+                        </ul>
+                        
+                        <div class="mt-auto space-y-6">
+                            <p class="text-xl md:text-2xl font-bold text-teal-300 price-text">
+                                Rp500.000 - Rp1.000.000+ 
+                                <span class="block text-sm text-gray-400 mt-1">(tergantung tingkat kesulitan)</span>
+                            </p>
+                            <a href="https://wa.me/6287734034677" target="_blank" 
+                            class="whatsapp-btn inline-flex items-center justify-start w-full bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-4 rounded-lg text-base md:text-lg">
+                                <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                                Pesan via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Kembali -->
+            <div class="mt-12 flex justify-center">
+                <a href="storeweb.html" 
+                   class="inline-flex items-center bg-teal-600 hover:bg-teal-700 px-8 py-3 rounded-lg shadow-lg transition-all 
+                          text-sm md:text-base group">
+                    <i class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i> 
+                    Kembali ke Halaman Utama
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

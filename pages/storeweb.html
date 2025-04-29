@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/icons/fasicon1.png" type="image/x-icon"/>
+    <title>Jasa Pembuatan Website - Modern Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary-color: #40E0D0;
+            --secondary-color: #212121;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.3s;
+            z-index: 999;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gradient-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #40E0D0, #20B2AA, #2a6074);
+            background-size: 400% 400%;
+            animation: gradientAnim 15s ease infinite;
+            opacity: 0.1;
+        }
+
+        @keyframes gradientAnim {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #40E0D0, #20B2AA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .floating-cubes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .cube {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(64, 224, 208, 0.5);
+            transform-style: preserve-3d;
+            animation: cubeFloat 10s infinite linear;
+        }
+
+        @keyframes cubeFloat {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+.back-button {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+}
+.back-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+}
+    </style>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+      <!-- Tombol Kembali -->
+      <a href="/index.html" 
+      class="back-button fixed top-6 left-6 bg-[#40E0D0] hover:bg-[#38c9b9] text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#40E0D0] flex items-center justify-center"
+      data-aos="fade-down"
+      aria-label="Kembali">
+       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+       </svg>
+   </a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="gradient-bg"></div>
+        <div class="floating-cubes">
+            <div class="cube" style="left: 10%; animation-delay: 0s"></div>
+            <div class="cube" style="left: 30%; animation-delay: 2s"></div>
+            <div class="cube" style="left: 50%; animation-delay: 4s"></div>
+            <div class="cube" style="left: 70%; animation-delay: 6s"></div>
+            <div class="cube" style="left: 90%; animation-delay: 8s"></div>
+        </div>
+        <div class="hero-content">
+            <h1 data-aos="zoom-in">Jasa Pembuatan Website</h1>
+            <p data-aos="zoom-in" data-aos-delay="200" class="text-xl opacity-80">Mau Website Keren, Cepat, dan Responsive? Kami Siap Membantu!</p>
+            <a href="#paket" class="mt-8 inline-block bg-gradient-to-r from-[#40E0D0] to-[#20B2AA] hover:opacity-80 px-8 py-4 text-xl font-semibold rounded-xl transition-all shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+                Lihat Paket
+            </a>
+        </div>
+    </section>
+
+    <!-- Paket Section -->
+    <section id="paket" class="py-20 px-4 md:px-10">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent" data-aos="fade-up">
+                Pilih Paketmu
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="package-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-3xl font-semibold mb-4 text-[#40E0D0]">Web Portofolio</h3>
+                    <p class="opacity-80 mb-6">Pilih paket sesuai kebutuhanmu.</p>
+                    <a href="paket.html" class="inline-block px-6 py-3 bg-[#40E0D0] hover:bg-[#38c9b9] rounded-lg transition-colors">
+                        Pesan Sekarang
+                    </a>
+                </div>
+                <div class="package-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-3xl font-semibold mb-4 text-[#40E0D0]">Web Shop</h3>
+                    <p class="opacity-80 mb-6">Cocok untuk bisnis & UMKM.</p>
+                    <a href="paket1.html" class="inline-block px-6 py-3 bg-[#40E0D0] hover:bg-[#38c9b9] rounded-lg transition-colors">
+                        Pesan Sekarang
+                    </a>
+                </div>
+                <div class="package-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-3xl font-semibold mb-4 text-[#40E0D0]">Web Request</h3>
+                    <p class="opacity-80 mb-6">Website sesuai keinginanmu.</p>
+                    <a href="paket2.html" class="inline-block px-6 py-3 bg-[#40E0D0] hover:bg-[#38c9b9] rounded-lg transition-colors">
+                        Pesan Sekarang
+                    </a>
+                </div>
+                <div class="package-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-3xl font-semibold mb-4 text-[#40E0D0]">Web Sadap/Tracking</h3>
+                    <p class="opacity-80 mb-6">Website Dengan Fitur Sadap.</p>
+                    <a href="store.html" class="inline-block px-6 py-3 bg-[#40E0D0] hover:bg-[#38c9b9] rounded-lg transition-colors">
+                        Pesan Sekarang
+                    </a>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+<footer class="footer border-t border-gray-800 py-12 mt-20 relative overflow-hidden">
+    <!-- Gradient Border -->
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#40E0D0] to-[#20B2AA] opacity-20"></div>
+    
+    <div class="max-w-6xl mx-auto px-4" data-aos="fade-up">
+        <!-- Social Media -->
+        <div class="flex justify-center space-x-6 mb-8">
+            <a href="#" class="social-icon text-2xl text-gray-400 hover:text-[#40E0D0] transition-colors duration-300">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-icon text-2xl text-gray-400 hover:text-[#40E0D0] transition-colors duration-300">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon text-2xl text-gray-400 hover:text-[#40E0D0] transition-colors duration-300">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-icon text-2xl text-gray-400 hover:text-[#40E0D0] transition-colors duration-300">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center opacity-75">
+            <p class="mb-4">Hubungi kami untuk website impian Anda</p>
+            <div class="space-x-4 mb-6">
+                <a href="#" class="hover:text-[#40E0D0] transition-colors duration-300">Syarat & Ketentuan</a>
+                <span class="text-[#40E0D0]">•</span>
+                <a href="#" class="hover:text-[#40E0D0] transition-colors duration-300">Kebijakan Privasi</a>
+            </div>
+            <p class="text-sm opacity-60">&copy; 2025 Rafasha Alfiandi. All rights reserved. Segala bentuk konten, desain, dan kode dalam platform ini dilindungi oleh hak cipta. Dilarang menyalin, mendistribusikan, atau menggunakan tanpa izin resmi.</p>
+        </div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="absolute bottom-0 left-0 w-full h-12 opacity-10">
+        <div class="cube" style="left: 15%; animation-delay: 1s"></div>
+        <div class="cube" style="left: 45%; animation-delay: 3s"></div>
+        <div class="cube" style="left: 75%; animation-delay: 5s"></div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Custom Cursor
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.custom-cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // AOS Init
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 120
+        });
+
+        // Parallax Effect
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth - e.pageX) / 100;
+            const y = (window.innerHeight - e.pageY) / 100;
+            document.querySelector('.hero-content').style.transform = 
+                `translate(${x}px, ${y}px)`;
+        });
+
+        const backButton = document.querySelector('.back-button');
+    const heroSection = document.querySelector('.hero');
+
+    function updateBackButton() {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        if (heroBottom > 100) { // Muncul ketika 100px dari bawah hero masih terlihat
+            backButton.classList.remove('hidden');
+        } else {
+            backButton.classList.add('hidden');
+        }
+    }
+
+    window.addEventListener('scroll', updateBackButton);
+    window.addEventListener('resize', updateBackButton);
+    updateBackButton(); // Inisialisasi awal
+    </script>
+</body>
+</html>
